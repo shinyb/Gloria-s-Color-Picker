@@ -76,9 +76,37 @@ body {
     align-items: flex-end;
 }
 
+/*Initial Color Swatch Values*/
+
+#swatch1 {
+    background-color: #B45608;
+}
+
+#swatch2 {
+    background-color: #158d0f;
+}
+
+#swatch3 {
+    background-color: #0E5B9B;
+}
+
+#swatch4 {
+    background-color: #A20DA9;
+}
+
+#swatch5 {
+    background-color: #B7590B;
+}
+
+
+
+
+
+
+
 .hex-placeholder {
     border: solid limegreen 1px;
-    background-color: black;
+    background-color: #000;
     color: whitesmoke;
     text-transform: uppercase;
     width: 100%;
@@ -87,7 +115,6 @@ body {
     font-size: .9rem;
     padding-top: 5px;
     padding-left: 5px;
-    
-    
+     
 }
 

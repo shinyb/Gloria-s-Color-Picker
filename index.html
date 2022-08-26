@@ -15,8 +15,9 @@
         <form id="color-picker" title=">Click the color button to select color or enter rgb, hsl or hex color number.">
             <span title="How to Use"></span>
 
-            <input id="color" type="color" value="#000" class="border-style">
+            <input id="color" type="color" value="#B45608" class="border-style">
          <select name="modes" id="modes" oninput="currentModeValue()" class="border-style">
+            <option value="quad">Quad</option>
             <option value="monochrome">Monochrome</option>
             <option value="monochrome-dark">Monochrome Dark</option>
             <option value="monochrome-light">Monochrome Light</option>
@@ -24,29 +25,29 @@
             <option value="complement">Complement</option>
             <option value="analogic-complement">Analogic Complement</option>
             <option value="triad">Triad</option>
-            <option value="quad">Quad</option>
+            
             <input type="button" id="get-scheme" value="Get Color Scheme" class="border-style">
          </select>
          
          
-         <input type="text" id="mode-value" value="monochrome">
+         <input type="text" id="mode-value" value="Quad">
         </form>
         <div class="color-container">
              
-            <div class="color-swatch" id="swatch1" value="fff">
-                <div class="hex-placeholder" id="hex-place1" value="000000">#fff</div>
+            <div class="color-swatch" id="swatch1" value="#B45608">
+                <div class="hex-placeholder" id="hex-place1" value="#B45608">#b45608</div>
             </div>
              <div class="color-swatch" id="swatch2">
-                <div class="hex-placeholder" id="hex-place2" value="2B283A">#fff</div>
+                <div class="hex-placeholder" id="hex-place2" value="158DOF">#158DOF</div>
             </div>
              <div class="color-swatch" id="swatch3">
-                <div class="hex-placeholder" id="hex-place3" value="Fff">#fff</div>
+                <div class="hex-placeholder" id="hex-place3" value="0E5B9B">#0E5B9B</div>
             </div>
              <div class="color-swatch" id="swatch4">
-                <div class="hex-placeholder" id="hex-place4" value="AAD1B6">#fff</div>
+                <div class="hex-placeholder" id="hex-place4" value="A20DA9">#A20DA9</div>
             </div>
              <div class="color-swatch" id="swatch5">
-                <div class="hex-placeholder" id="hex-place5" value="A626D3">#fff</div>
+                <div class="hex-placeholder" id="hex-place5" value="B7590B">#B7590B</div>
             </div>
           
         </div>
