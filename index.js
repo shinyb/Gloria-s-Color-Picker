@@ -18,13 +18,23 @@ function currentModeValue(){
   
 })
 
-function renewMode() { 
+/*function renewMode() { 
    modes.addEventListener('input', function() {
    output = modes.options[modes.selectedIndex].value
    console.log("this is output " + output)
    callfetch()
-})
+})*/
 
+modes.addEventListener('input', function(){
+   renewMode()
+   callfetch()
+}
+   
+
+
+function renewMode() {
+   output = modes.options[modes.selectedIndex].value
+   console.log("this is output " + output)
 
 schemeBtn.addEventListener('click', function() {
        
