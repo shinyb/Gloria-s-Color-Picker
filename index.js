@@ -11,16 +11,12 @@ function currentModeValue(){
  }
  
 
- 
  seedColor.addEventListener('input', function(e) {
   document.getElementById("hex-place1").innerHTML = this.value;
   seedColor.value = this.value;
   swatch1.style.background = this.value;
   
 })
-
-
-
 
 function renewMode() { 
    modes.addEventListener('input', function() {
@@ -51,15 +47,16 @@ function callfetch() {
                     console.log(color.hex.value)
                     colorSwatches.push(color.hex.value)
                     console.log(colorSwatches)
-            document.getElementById("swatch0").style.backgroundColor = colorSwatches[0]
-            document.getElementById("swatch0").value = colorSwatches[0]
-               document.getElementById("hex-place0").textContent = colorSwatches[0]
             document.getElementById("swatch1").style.backgroundColor = colorSwatches[1]
-               document.getElementById("hex-place1").textContent = colorSwatches[1]
-            document.getElementById("swatch2").style.backgroundColor = colorSwatches[2]
+            document.getElementById("hex-place1").textContent = colorSwatches[1]
+            document.getElementById("swatch2").value = colorSwatches[2]
                document.getElementById("hex-place2").textContent = colorSwatches[2]
             document.getElementById("swatch3").style.backgroundColor = colorSwatches[3]
                document.getElementById("hex-place3").textContent = colorSwatches[3]
+            document.getElementById("swatch4").style.backgroundColor = colorSwatches[4]
+               document.getElementById("hex-place4").textContent = colorSwatches[4]
+            document.getElementById("swatch5").style.backgroundColor = colorSwatches[5]
+               document.getElementById("hex-place5").textContent = colorSwatches[5]
              
             
         }colorSwatches.splice(0, colorSwatches.length)
