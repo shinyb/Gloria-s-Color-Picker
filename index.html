@@ -9,32 +9,33 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+    <div id="gradient-border">
        <main class="container">
         <h1>My <span style="color: blue">C</span><span style="color: orange">O</span><span style="color: purple">L</span><span style="color: green">O</span><span style="color: brown">R</span> Scheme Picker</h1>
         
         <form id="color-picker" title=">Click the color button to select color or enter rgb, hsl or hex color number.">
             <span title="How to Use"></span>
                                                                                 
-            <input id="color" type="color" value="#B45608" class="border-style">
-         <select name="modes" id="modes" oninput="currentModeValue()" class="border-style">
-            <option value="quad">Quad</option>
-            <option value="monochrome">Monochrome</option>
-            <option value="monochrome-light">Monochrome Dark</option>
-            <option value="monochrome-dark">Monochrome Light</option>
+            <input id="color" type="color" value="#27D011" class="border-style">
+         
+        <select name="modes" id="modes" oninput="currentModeValue()" class="border-style">
             <option value="analogic">Analogic</option>
-            <option value="complement">Complement</option>
             <option value="analogic-complement">Analogic Complement</option>
+            <option value="complement">Complement</option>
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome Dark</option>
+            <option value="monochrome-light">Monochrome Light</option>
+            <option value="quad">Quad</option>
             <option value="triad">Triad</option>
-            
-            <input type="button" id="get-scheme" value="Get Color Scheme" class="border-style">
+
+          <input type="button" id="get-scheme" value="Get Color Scheme" class="border-style">
          </select>
-         
-         
-         <input type="text" id="mode-value" value="Quad">
+              
+         <input type="text" id="mode-value" value="analogic">
         </form>
         <div class="color-container">
              
-            <div class="color-swatch" id="swatch1" value="#B45608">
+            <div class="color-swatch" id="swatch1" value="#27D011">
                 <div class="hex-placeholder" id="hex-place0" value="#B45608">#b45608</div>
             </div>
              <div class="color-swatch" id="swatch2">
@@ -52,6 +53,7 @@
           
         </div>
     </main>
+    </div><!--End gradient border-->
        
         
         
