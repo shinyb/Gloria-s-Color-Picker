@@ -3,6 +3,7 @@ let seedColor = document.getElementById('color');
 const modes = document.getElementById("modes")
 const options = document.getElementsByTagName('option')
 const modeValue = document.getElementById("mode-value")
+const swatch1 = document.querySelector("#swatch1")
 let colorSwatches = []
 
 
@@ -13,12 +14,14 @@ function currentModeValue(){
  
 
  seedColor.addEventListener('input', function(e) {
-  document.getElementById("hex-place0").innerHTML = this.value
-  seedColor.value = this.value;
-  swatch1.style.backgroundColor = this.value
+   seedColor = this.value;
+   document.getElementById("hex-place0").innerHTML = seedColor
+ 
+  swatch1.style.backgroundColor = seedColor
   
 })
-console.log("event listener seed color is:" + seedColor)
+
+console.log("event listener seed color is:" + seedColor.value)
 
 
 modes.addEventListener('input', function(){
@@ -41,7 +44,7 @@ schemeBtn.addEventListener('click', function() {
      
    
 async function callfetch() {
-   const initColor = seedColor.value.slice(1, 7)
+   const initColor = seedColor.slice(1, 7)
    const getMode = modes.options[modes.selectedIndex].value
    console.log(getMode)
    console.log("init color before fetch" + initColor)
@@ -49,7 +52,7 @@ async function callfetch() {
    const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${initColor}&mode=${getMode}&count=5`)
 
       const data = await response.json()
-      console.log(response)
+      console.log(data)
       console.log("seed color" + data.colors[0].hex.value)
       colorSwatches.push(data.colors[0].hex.value)
       colorSwatches.push(data.colors[1].hex.value)
@@ -63,16 +66,16 @@ async function callfetch() {
                document.getElementById("hex-place0").textContent = initColor
 
             document.getElementById("swatch2").style.backgroundColor = colorSwatches[0]
-               document.getElementById("hex-place1").textContent = colorSwatches[0]
+               document.getElementById("hex-place1").textContent = colorSwatches[1]
 
             document.getElementById("swatch3").style.backgroundColor = colorSwatches[1]
-               document.getElementById("hex-place2").textContent = colorSwatches[1]
+               document.getElementById("hex-place2").textContent = colorSwatches[2]
 
             document.getElementById("swatch4").style.backgroundColor = colorSwatches[2]
-               document.getElementById("hex-place3").textContent = colorSwatches[2]
+               document.getElementById("hex-place3").textContent = colorSwatches[3]
 
             document.getElementById("swatch5").style.backgroundColor = colorSwatches[3]
-               document.getElementById("hex-place4").textContent = colorSwatches[3]
+               document.getElementById("hex-place4").textContent = colorSwatches[4]
 
 
             colorSwatches.splice(0, colorSwatches.length)
